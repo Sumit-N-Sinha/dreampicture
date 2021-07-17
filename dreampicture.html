@@ -8,16 +8,16 @@
  }
  body{
         background-color:#D3E5E7;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 60%;
-  font-weight: bold; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        font-weight: bold; 
  }
  div{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-size: 20px; 
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+     font-size: 20px; 
  }
 
    h3{
@@ -30,7 +30,6 @@
        font-family:Verdana;
        padding:5px;
        border-radius:6px;
-    /* Fill  the attributes and values */
    }
  
  table, td, tr{
@@ -42,8 +41,7 @@
      color:#000000;
      background-color:#E6E6E6;
      padding:1px;
-  border: solid 2px black;
-  /* Fill  the attributes and values */ 
+     border: solid 2px black;
  }
 
  ::-webkit-input-placeholder { 
@@ -66,7 +64,6 @@
  #result{
      color:#0066FF;
      font-size:20px;
-  /* Fill  the attributes and values */ 
  }
  </style>
 </head>
@@ -74,26 +71,26 @@
 <body>
 <div>
     
-            <h3>Dream Pictures<!-- Fill the heading text --></h3>
+            <h3>Dream Pictures</h3>
             
             
 <form onsubmit="return display()" >
 <table>
  <tr>
         <td>Customer Name</td>
-        <td><input type="text" name="cname" placeholder="Enter the customer name" required id="cname"><!-- Fill the code for Customer Name --></td>
+        <td><input type="text" name="cname" placeholder="Enter the customer name" required id="cname"></td>
     </tr>
  <tr>
        <td>Phone Number</td>
-    <td><input type="text" id="phno" name="phno" required placeholder="Enter the phone number"><!-- Fill the code for Phone Number --></td>
+    <td><input type="text" id="phno" name="phno" required placeholder="Enter the phone number"></td>
     </tr>
  <tr>
         <td>Ticket Id</td>
-        <td><input type="text" id="tid" name="tid" placeholder="Enter the ticket id" required pattern="[0-9]{3}"><!-- Fill the code for Ticket Id --></td>
+        <td><input type="text" id="tid" name="tid" placeholder="Enter the ticket id" required pattern="[0-9]{3}"></td>
     </tr>
  <tr>
         <td>Date of Booking</td>
-        <td><input type="date" id="bookingdate" name="bookingdate" required><!-- Fill the code for Date of Booking --></td>
+        <td><input type="date" id="bookingdate" name="bookingdate" required></td>
     </tr>
  <tr>
   <td>Screen Category</td>
@@ -102,11 +99,11 @@
                   <option value="Balcony">Balcony</option>
                   <option value="Platinum">Platinum</option>
                   <option value="Gold">Gold</option>
-              </select><!-- Fill the code for Screen Category --></td>
+              </select></td>
  </tr>
  <tr>
         <td>Number of Tickets</td>
-        <td><input type="text" id="noOfTickets" name="noOfTickets" placeholder="Enter the number of tickets" required><!-- Fill the code for Number of Tickets --></td>
+        <td><input type="text" id="noOfTickets" name="noOfTickets" placeholder="Enter the number of tickets" required></td>
     </tr>
  <tr>
   <td>Movie Name</td>
@@ -114,24 +111,24 @@
 <option value="Select Movie Name..">Select Movie Name..</option>
 <option value="Godzilla Vs Kong">Godzilla Vs Kong</option>
 <option value="Monster Hunter">Monster Hunter</option>
-</select><!-- Fill the code for Movie Name --></td>
+</select></td>
  </tr>
  <tr>
         <td>Beverages</td>
-        <td><input type="checkbox" value="beverages" name="beverages" id="beverages">Click here if you want beverages<!-- Fill the code for Beverages --></td>
+        <td><input type="checkbox" value="beverages" name="beverages" id="beverages">Click here if you want beverages</td>
     </tr>
 </table>
 
-<!-- Fill the submit component value attribute  -->
+
 <p><input type="submit" id="submit" name="submit" value="Book Ticket"/></p>
 
-<!-- Fill the div id  -->
+
 <div id="result"> </div>
 
 
 </form>
 </div>
-<!--Write necessary code wherever needed to complete this code challenge  -->
+
 <script>
 
 function display()
@@ -159,7 +156,7 @@ var n=document.getElementById("noOfTickets").value;
             
         document.getElementById("result").innerHTML="Ticket is booked successfully for movie "+movie+" you should pay Rs."+tot;
     
- /* Fill  the Javascript code to display the message after calculation the bill amount */
+
  return false;
 }
 </script>
