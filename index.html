@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dream Pictures</title> 
+  <style>
+  input[type="text"], input[type="date"], select {
+ width:98%;
+ }
+ body{
+        background-color:#D3E5E7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  font-weight: bold; 
+ }
+ div{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 20px; 
+ }
+
+   h3{
+       margin-left:auto;
+       margin-right:auto;
+       color:#FFFFFF;
+       background-color:#6666FF;
+       text-align:center;
+       width:50%;
+       font-family:Verdana;
+       padding:5px;
+       border-radius:6px;
+   }
+ 
+ table, td, tr{
+     width:50%;
+     margin-left:auto;
+     margin-right:auto;
+     border-spacing:1px;
+     border-radius:6px;
+     color:#000000;
+     background-color:#E6E6E6;
+     padding:1px;
+     border: solid 2px black;
+ }
+
+ ::-webkit-input-placeholder { 
+  color: #696969;
+  font-weight: bold;
+ }
+ 
+ #submit{
+     color:#FFFFFF;
+     background-color:#6666FF;
+     margin-left:auto;
+     margin-right:auto;
+     padding:5px;
+     width:50%;
+     font-family:Verdana;
+     font-weight:bold;
+     border-radius:6px;
+  
+ }
+ #result{
+     color:#0066FF;
+     font-size:20px;
+  
+ }
+ </style>
+</head>
+ 
+<body>
+<div>
+    
+            <h3>Dream Pictures</h3>
+            
+            
+<form onsubmit="return display()" >
+<table>
+ <tr>
+        <td>Customer Name</td>
+        <td><input type="text" name="cname" placeholder="Enter the customer name" required id="cname"></td>
+    </tr>
+ <tr>
+       <td>Phone Number</td>
+    <td><input type="text" id="phno" name="phno" required placeholder="Enter the phone number"></td>
+    </tr>
+ <tr>
+        <td>Ticket Id</td>
+        <td><input type="text" id="tid" name="tid" placeholder="Enter the ticket id" required pattern="[0-9]{3}"></td>
+    </tr>
+ <tr>
+        <td>Date of Booking</td>
+        <td><input type="date" id="bookingdate" name="bookingdate" required></td>
+    </tr>
+ <tr>
+  <td>Screen Category</td>
+  <td><select name="category" id="category">
+                  <option value="Select Screen Category..">Select Screen Category..</option>
+                  <option value="Balcony">Balcony</option>
+                  <option value="Platinum">Platinum</option>
+                  <option value="Gold">Gold</option>
+              </select></td>
+ </tr>
+ <tr>
+        <td>Number of Tickets</td>
+        <td><input type="text" id="noOfTickets" name="noOfTickets" placeholder="Enter the number of tickets" required></td>
+    </tr>
+ <tr>
+  <td>Movie Name</td>
+  <td><select id="movie" name="movie">
+<option value="Select Movie Name..">Select Movie Name..</option>
+<option value="Godzilla Vs Kong">Godzilla Vs Kong</option>
+<option value="Monster Hunter">Monster Hunter</option>
+</select></td>
+ </tr>
+ <tr>
+        <td>Beverages</td>
+        <td><input type="checkbox" value="beverages" name="beverages" id="beverages">Click here if you want beverages</td>
+    </tr>
+</table>
+
+
+<p><input type="submit" id="submit" name="submit" value="Book Ticket"/></p>
+
+
+<div id="result"> </div>
+
+
+</form>
+</div>
+
+<script>
+
+function display()
+{ 
+    var cat=document.getElementById("category").value;
+
+var n=document.getElementById("noOfTickets").value;
+        var movie=document.getElementById("movie").value;
+        var chk = document.getElementById("beverages");
+        var tot;
+        
+        if(cat=="Balcony"){
+         tot = 750*n;
+            }
+        else if(cat=="Platinum"){
+         tot = 500*n;
+            }
+        else if(cat=="Gold"){
+         tot = 450*n;
+            }
+        
+        if(chk.checked==true){
+                tot = tot + (250*n);
+            }
+            
+        document.getElementById("result").innerHTML="Ticket is booked successfully for movie "+movie+" you should pay Rs."+tot;
+    
+ 
+ return false;
+}
+</script>
+</body>
+</html>
